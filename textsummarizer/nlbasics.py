@@ -1,6 +1,12 @@
 import nltk
 from pprint import pprint
 
+# Download required nltk data
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
+
 # Tokenizing text
 text = input ("Enter your text to tokenize here: ")
 from nltk.tokenize import word_tokenize, sent_tokenize
@@ -14,6 +20,7 @@ print(words)
 # Removing stopwords
 from nltk.corpus import stopwords
 from string import punctuation
+
 customStopWords=set(stopwords.words('english')+list(punctuation))
 wordsWOStopwords=[word for word in word_tokenize(text) if word not in customStopWords]
 print(wordsWOStopwords)
@@ -38,6 +45,7 @@ pprint(tagList)
 # Disambiguating word meanings
 word = input ("Enter your word here: ")
 from nltk.corpus import wordnet as wn
+
 for ss in wn.synsets(word):
    print(ss, ss.definition())
 
