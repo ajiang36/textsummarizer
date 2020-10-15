@@ -1,5 +1,9 @@
 import nltk
 
+# Download required nltk data
+nltk.download('punkt')
+nltk.download('stopwords')
+
 text = input ("Enter your text here: ")
 from nltk.tokenize import word_tokenize, sent_tokenize
 
