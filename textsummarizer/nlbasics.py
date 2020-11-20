@@ -1,6 +1,12 @@
 import nltk
 from pprint import pprint
 
+# Download required nltk data
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
+
 # Tokenizing module
 from nltk.tokenize import word_tokenize, sent_tokenize
 # Stopwords module
